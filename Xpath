@@ -1,0 +1,17 @@
+	WebDriver dr =  new ChromeDriver();
+	dr.get("https://demoqa.com/automation-practice-form");
+System.out.println(dr.getTitle());
+String[] names = {"Vikesgh","Naiba","Shivv","Sukuna"};
+Random random = new Random();
+String name = names[random.nextInt(names.length)];
+
+dr.findElement(By.xpath("//input[@placeholder='First Name']")).sendKeys(name);
+dr.findElement(By.xpath("//input[@placeholder='Last Name']")).sendKeys("Test");
+
+String email = name+"@gmail.com";
+dr.findElement(By.xpath("//input[@placeholder='name@example.com']")).sendKeys(email);
+
+dr.FindElement(By.xpath("//*[text()='Male']")).click();
+
+
+_______________________________________id---userNumber______________classname-----form-control__________//div[@id='subjectsContainer']/div[1]/div[1]______//*[text()='Reading']__________id-------currentAddress
